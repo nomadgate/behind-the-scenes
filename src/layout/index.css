@@ -9,4 +9,5 @@ html {
 body {
     margin: 0;
     padding: 20px;
+    max-width: 730px;
 }
