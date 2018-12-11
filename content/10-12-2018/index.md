@@ -144,6 +144,8 @@ Here's how readers on Nomad Gate see the same article:
 
 No annoying popups, no cookie notices, no ad tracking (only anonymized Google Analytics), no bullshit. Just the article you came to read, and nothing more.
 
+The above is just one example of how Medium will annoy your readers. Check out [this article](https://medium.com/@nikitonsky/medium-is-a-poor-choice-for-blogging-bb0048d19133) (ironically posted on Medium) for a lot more examples.
+
 Your readers deserve better than Medium.
 
 ## How to use Medium in 2019
