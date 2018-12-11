@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import Moment from 'react-moment';
 
 class PostListing extends React.Component {
   getPostList() {
@@ -21,17 +20,12 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div id="post-list">
+      <div>
         {/* Your post list here. */
         postList.map(post => (
-          <div className="post">
-            <Link to={post.path} key={post.title}>
-              <h2>{post.title}</h2>
-            </Link>
-            <Moment format="MMM DD, YYYY">
-              {post.date}
-            </Moment>
-          </div>
+          <Link to={post.path} key={post.title}>
+            <h1>{post.title}</h1>
+          </Link>
         ))}
       </div>
     );
