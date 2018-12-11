@@ -1,7 +1,7 @@
 ---
 title: "Posting Evergreen Content on Medium is a Terrible Idea"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
-date: "10/12/2018"
+date: "2018-12-10"
 slug: medium-evergreen-content
 category: "tech"
 tags:
@@ -16,7 +16,7 @@ Particularly for *evergreen* content.
 Here's why.
 
 ## My history with Medium
-In 2015, Nomad Gate was born as a side project—on Medium. To benefit from Medium's strong domain authority, I decided to not use a custom domain on Medium but rather hosted the site on *medium.com/nomad-gate*.
+In 2015, [Nomad Gate](https://nomadgate.com) was born as a side project—on Medium. To benefit from Medium's strong domain authority, I decided to not use a custom domain on Medium but rather hosted the site on *medium.com/nomad-gate*.
 
 I wrote three long-form, in-depth articles that summer, and before long, two of them started to see a good amount of traffic every month. One was about the Estonian e-Residency program and the other about the world's best banks for nomads and frequent international travelers.
 
@@ -98,7 +98,7 @@ If I had used a custom domain for my Medium publication, it wouldn't have been m
 
 Unfortunately, after a bit of Googling I found out that Medium removed the possibility to add your own custom domains, so it was too late for my Nomad Gate publication to get on that gravy train.
 
-But thanks to a massive amount of luck **I eventually discovered a workaround**.
+But thanks to a great deal of luck and good fortune, **I eventually discovered a workaround**.
 
 While I can't change the canonical links of my remaining Medium posts, I found a way to add 301 redirects to them instead—which in many ways is even better!
 
