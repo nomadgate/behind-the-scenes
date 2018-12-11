@@ -76,11 +76,11 @@ After emailing yourfriends@medium.com with the new canonical link that I wanted 
 
 Oh, shit.
 
-Of course, I know that the only way to set the canonical URL correctly from the beginning is to use the import tool.
+Of course I knew that the only way to set the canonical URL correctly from the beginning is to use the import tool.
 
 But this was the bit that surprised me: "there is no way for you **(or us)** to set it to something else."
 
-Here's the same guy that made the same exact change for me a few months earlier saying that it's not *possible* for them to make the change.
+Here's the same guy who made the same exact change for me a few months earlier saying that it's not *possible* for them to make the change.
 
 If he had said that they no longer *want* to do it, that would have been one thing. A heads-up would have been nice, but still, that's their prerogative.
 
@@ -107,6 +107,10 @@ Try going to [https://medium.com/nomad-gate/estonian-e-residency-ultimate-guide-
 Yup, that's right!
 
 You won't even land on medium.com, but rather be redirected instantly to the [new version of the article on nomadgate.com](https://nomadgate.com/estonian-e-residency-guide/).
+
+I'm not sure if I should share the workaround publicly (in case it will trigger Medium to block it), so let me just say that it's pretty easy to spot what I did if you're a bit tech-savvy.
+
+If you want to know, you can always [contact me](https://nomadgate.com/contact/).
 
 ### Limitations on embeds making list building harder
 
