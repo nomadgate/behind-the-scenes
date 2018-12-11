@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: monospace;
 }
 
+h1 {
+    font-size: 30px;
+}
+
 h2 {
     font-size: 24px;
 }
@@ -28,7 +32,6 @@ h3 {
 #post-list .post h2 {
     margin: 0;
     padding: 0;
-    font-size: 24px;
 }
 
 #post-list .post time {
