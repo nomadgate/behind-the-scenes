@@ -88,7 +88,7 @@ But to say that it's not *possible* for them is clearly a lie.
 
 Medium, if you ever read this: I don't appreciate being lied to.
 
-To top it off, they simply ignored the two (very polite) follow-up emails I sent them.
+To top it off, they simply ignored [the two (polite) follow-up emails](https://cl.ly/93ce51946717) I sent them.
 
 Not so friendly anymore, or what, Medium? Maybe consider changing your *YourFriends*@medium.com address?
 
