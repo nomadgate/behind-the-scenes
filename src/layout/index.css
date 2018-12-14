@@ -7,10 +7,11 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 20px;
     max-width: 730px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
