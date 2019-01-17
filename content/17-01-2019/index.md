@@ -253,10 +253,13 @@ const IndexPage = () => (
 export default IndexPage
 ```
 
-…
+I also changed `<footer>` into `<footer className="site-footer">` in `layout.js` to verify that that part of the CSS worked as well.
+
+Finally I also changed the background color of the Header component to black in `header.js`.
 
 At this point the homepage of my new Gatsby site had morphed into this:
 
 ![Nomad Gate v2 after importing the first bit of code from the old index file](./v2-step-01.jpg)
 
 Still a far cry from the original homepage of Nomad Gate v1, but at least I could see that the CSS was working properly.
+
