@@ -281,8 +281,19 @@ My next goal was to recreate the section with the links to each article. Let's j
 
 Before starting to write the component I decided to add back some of the articles from Nomad Gate, so I had some actual articles to work with.
 
-```jsx:title=src/pages/index.js
-import React from "react"
+```zsh
+npm install gatsby-transformer-remark --save
+```
 
-export default () => <div>Hello world!</div>
+```js:title=gatsby-config.js (Gatsby)
+[…]
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/content/`
+      }
+    },
+    `gatsby-transformer-remark`,
+[…]
 ```
