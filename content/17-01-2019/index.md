@@ -10,9 +10,17 @@ tags:
     - gatsby
 ---
 
+Migrating your Jekyll site to Gatsby can seem very overwhelming, especially if you don't have a lot of experience with React and Gatsby already.
+
+Don't worry, I was in the exact same position, and it was more doable than it first seemed.
+
+Plus, you'll have this extensive guide to hold your hand along the way, so for you it will be even easier!
+
+But before we begin, let's take a step back so you'll understand where I was coming from.
+
 I was first introduced to the fantastic world of static site generators in 2015 while working for Teleport. 
 
-When I in late 2016 started building out the first proper version of Nomad Gate, I decided to build it with Jekyll, the static site generator created by GitHub founder `TKTKTK`.
+When I in late 2016 started building out the first proper version of Nomad Gate, I decided to build it with Jekyll—the static site generator created by GitHub founder Tom Preston-Werner.
 
 While Jekyll has served me really well over the years, I've started to notice some of its limitations.
 
@@ -32,8 +40,6 @@ Luckily for me, there's a new kid on the block in the SSG landscape: GatsbyJS. O
 
 While I don't have *a lot* of experience with JS, and pretty much zero experience with React (which Gatsby is built on), but I (perhaps somewhat naively?) saw it as a great learning opportunity.
 
----
-
 ## Migrating from Jekyll to GatsbyJS
 
 The rest of the article will be a strange mix of a *case study* where I go into detail of what I personally did to migrate Nomad Gate, and trying generalize as much as possible of that into instructions that are relevant for your own migration.
@@ -46,7 +52,7 @@ After [installing Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/#install-g
 
 If you'd like to use one of [the other starters available](https://www.gatsbyjs.org/starters/?v=2) you just add the Github URL of the starter to end of that command.
 
-```bash
+```zsh
 gatsby new [your_directory] [url_of_starter]
 ```
 
@@ -95,7 +101,8 @@ To migrate my styles to Gatsby, I:
 
 My plugin section now looked like this:
 
-```javascript
+```javascript:title=gatsby-config.js (Gatsby)
+[…]
 plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -121,6 +128,7 @@ plugins: [
       },
     },
   ],
+[…]
 ```
 
 Finally I just imported the `main.scss` file into the default template located in `layout.js` by adding `import '../styles/main.scss'`.
@@ -141,7 +149,7 @@ This is how it looked like in its logged out state:
 
 ![Nomad Gate V1 homepage in logged out state](./nomadgate-v1-logged-out.jpg)
 
-It primarily consisted of these components main components:
+It primarily consisted of these components:
 
 - The large header area with the hero image, logo, navigation bar, etc.
 - An introduction text that was generated on the fly based on the logged in/out state of the user.
@@ -150,7 +158,7 @@ It primarily consisted of these components main components:
 
 My `index.html` in Jekyll looked like this:
 
-```html
+```html:title=index.html (Jekyll)
 ---
 layout: default
 cover_image: /uploads/covers/loner.jpg
@@ -212,7 +220,7 @@ I also removed the lines importing the Image and Link components since those wer
 
 My `index.js` file then looked like this:
 
-```javascript
+```jsx:title=src/pages/index.js (Gatsby)
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -255,7 +263,7 @@ export default IndexPage
 
 I also changed `<footer>` into `<footer className="site-footer">` in `layout.js` to verify that that part of the CSS worked as well.
 
-Finally I also changed the background color of the Header component to black in `header.js`.
+Finally I also changed the background color of the Header component to black in `header.js`, and added more appropriate `siteMetadata` in `gatsby-config.js`
 
 At this point the homepage of my new Gatsby site had morphed into this:
 
@@ -263,3 +271,14 @@ At this point the homepage of my new Gatsby site had morphed into this:
 
 Still a far cry from the original homepage of Nomad Gate v1, but at least I could see that the CSS was working properly.
 
+### Getting some content to work with
+
+My next goal was to recreate the section with the links to each article. Let's just call them *article cards*.
+
+Before starting to write the component I decided to add back some of the articles from Nomad Gate, so I had some actual articles to work with.
+
+```jsx:title=src/pages/index.js
+import React from "react"
+
+export default () => <div>Hello world!</div>
+```
