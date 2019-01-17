@@ -40,7 +40,7 @@ Luckily for me, there's a new kid on the block in the SSG landscape: GatsbyJS. O
 
 While I don't have *a lot* of experience with JS, and pretty much zero experience with React (which Gatsby is built on), but I (perhaps somewhat naively?) saw it as a great learning opportunity.
 
-## Migrating from Jekyll to GatsbyJS
+## The migration process
 
 The rest of the article will be a strange mix of a *case study* where I go into detail of what I personally did to migrate Nomad Gate, and trying generalize as much as possible of that into instructions that are relevant for your own migration.
 
@@ -56,7 +56,7 @@ If you'd like to use one of [the other starters available](https://www.gatsbyjs.
 gatsby new [your_directory] [url_of_starter]
 ```
 
-E.g. `gatsby new my_site https://github.com/gatsbyjs/gatsby-starter-hello-world` to use the Hello World starter.
+E.g. `zsh›gatsby new my_site https://github.com/gatsbyjs/gatsby-starter-hello-world` to use the Hello World starter.
 
 Inside my Gatsby directory (`cd nomadgate-v2`) I also ran `npm install gatsby-cli --save` to add Gatsby to the list of dependencies for the project. This is required for my host (Netlify) to build the site when pushed to production.
 
@@ -86,6 +86,12 @@ Just initialize a local git repository in your Gatsby site directory, push to Gi
 ### A Sassy CSS migration
 
 Back to the actual migration.
+
+First step: Let's port over my stylesheets!
+
+After setting up Gatsby with the default starter, this is what the new site looked like when running `gatsby develop`:
+
+![Gatsby Default starter before making any changes](./gatsby-default.jpg)
 
 In Jekyll I had been using SCSS (Sassy CSS) to generate the stylesheets. My hope was that I could just move those files over to Gatsby without much adaption.
 
@@ -131,7 +137,7 @@ plugins: [
 […]
 ```
 
-Finally I just imported the `main.scss` file into the default template located in `layout.js` by adding `import '../styles/main.scss'`.
+Finally I just imported the `main.scss` file into the default template located in `layout.js` by adding `js›import '../styles/main.scss'`.
 
 If you use a different starter than the default one I used, your default template might be located elsewhere, or there might exist one yet. The principle is the same, just import the `main.scss` file where the CSS is needed.
 
@@ -210,9 +216,7 @@ if (totalUsers) {
 </script>
 ```
 
-![Gatsby Default starter before making any changes](./gatsby-default.jpg)
-
-Next, I copied all the HTML contained in `<div class="home">` and ran it through [this HTML to JSX compiler](https://magic.reactjs.net/htmltojsx.htm).
+Next, I copied all the HTML contained in `html›<div class="home">` and ran it through [this HTML to JSX compiler](https://magic.reactjs.net/htmltojsx.htm).
 
 Then I replaced the bulk of the JSX in the IndexPage constant found in `/src/pages/index.js` of my Gatsby site with the resulting output.
 
@@ -261,7 +265,7 @@ const IndexPage = () => (
 export default IndexPage
 ```
 
-I also changed `<footer>` into `<footer className="site-footer">` in `layout.js` to verify that that part of the CSS worked as well.
+I also changed `html›<footer>` into `html›<footer className="site-footer">` in `layout.js` to verify that that part of the CSS worked as well.
 
 Finally I also changed the background color of the Header component to black in `header.js`, and added more appropriate `siteMetadata` in `gatsby-config.js`
 
