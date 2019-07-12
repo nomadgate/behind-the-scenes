@@ -297,3 +297,9 @@ npm install gatsby-transformer-remark --save
     `gatsby-transformer-remark`,
 […]
 ```
+
+
+[Following this guide](https://www.gatsbyjs.org/docs/adding-markdown-pages/) to add the markdown pages.
+
+- Important that dates are in a valid format. Something like 2019-01-31 works fine.
+
